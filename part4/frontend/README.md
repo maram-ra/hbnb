@@ -155,8 +155,7 @@ We Worked together to implement, test, and document each daigram together. Each 
   
 <br>
 
-[![GitHub](https://img.shields.io/badge/GitHub-Khulood_AlOtaibi-lightpink)](https://github.com/KhuloodGhazi)
 [![GitHub](https://img.shields.io/badge/GitHub-Maram_Alsofyani-lightpink)](https://github.com/maram-ra)
-[![GitHub](https://img.shields.io/badge/GitHub-Hessah_Alotaysh-lightpink)](https://github.com/hessafa)
+
 
 
