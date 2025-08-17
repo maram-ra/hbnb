@@ -61,29 +61,30 @@ function ensurePriceFilterOptions() {
 
 // ---------- Render helpers ----------
 function createPlaceCard(place) {
-  const card = document.createElement('div');
-  card.className = 'place-card';
-  card.style.margin = '20px';
-  card.style.padding = '10px';
-  card.style.border = '1px solid #ddd';
-  card.style.borderRadius = '10px';
+  const col = document.createElement('div');
+  col.className = 'col-12 col-sm-6 col-lg-4 col-xl-3';
 
-  const imgSrc = (place.images && place.images[0]) || 'images/sample1.jpg';
-  card.innerHTML = `
-    <img src="${imgSrc}" alt="${place.title}">
-    <div class="place-info">
-      <h3>${place.title}</h3>
-      <p>${place.description ?? ''}</p>
-      <p><strong>Price:</strong> $${place.price} / night</p>
-      <button class="details-button" data-id="${place.id}">View Details</button>
+  const img = (place.images && place.images[0]) || 'images/sample1.jpg';
+
+  col.innerHTML = `
+    <div class="place-card position-relative text-white" style="background-image: url('${img}')">
+      
+
+      <div class="place-info position-relative d-flex flex-column justify-content-between h-100 p-3">
+        <div>
+          <h5 class="fw-bold">${place.title}</h5>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-auto">
+          <a href="place.html?id=${place.id}" class="text-white fw-semibold text-decoration-none">Book now</a>
+        </div>
+      </div>
+
+      <div class="visually-hidden host-name">${place.host || 'Unknown Host'}</div>
     </div>
   `;
-  const btn = card.querySelector('.details-button');
-  btn.addEventListener('click', () => {
-    window.location.href = `place.html?id=${encodeURIComponent(place.id)}`;
-  });
-  return card;
+  return col;
 }
+
 
 function renderPlaces(listEl, places) {
   listEl.innerHTML = '';

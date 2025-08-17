@@ -4,133 +4,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HBnB - Explore Unique Places</title>
- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Untitled+Sans&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 
+ <!-- Montserrat Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/icon.png">
 </head>
 <body>
-  <!-- Header with logo and nav -->
-  <header class="site-header">
+  <!-- Header -->
+  <header class="site-header d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
     <a href="index.html">
-  <img src="images/logo.png" alt="HBnB Logo" class="logo">
-</a>
-
-    <nav class="main-nav">
-      <a href="login.html" class="login-button" id="login-link">Login</a>
+      <img src="images/logo.png" alt="HBnB Logo" class="logo" style="height:40px">
+    </a>
+    <nav>
+      <a href="login.html" class="btn btn-outline-dark" id="login-link">Login</a>
     </nav>
   </header>
 
-
-
-  <!-- Hero section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Find <span>Unique Places</span> to Stay & Experience.</h1>
-      <p>Join thousands of travelers exploring the world comfortably.</p>
-    
-    </div>
-    <div class="hero-image">
-      <img src="images/hero_place.jpg" alt="Featured Place">
-    </div>
-  </section>
-
-<!-- Mission section styled like reference -->
-<section class="hero-intro">
-  <div class="hero-wrap">
-    
-    <!-- Left: video with border accent -->
-    <div class="media-card">
-      <video class="hero-video"
-             autoplay
-             loop
-             muted
-             playsinline
-             preload="metadata"
-             poster="images/poster.jpg"
-             disablepictureinpicture>
-        <source src="videos/house-nature.webm" type="video/webm">
-        <source src="images/7664029-hd_2048_1080_24fps.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      
+<!-- Hero Section with Video -->
+<section class="container py-5 my-5 ">
+  <div class="row align-items-center">
+    <!-- Left Text -->
+    <div class="col-md-6">
+      <h1 class="display-4 fw-bold">Find <span class="text-muted">Unique Places</span> to Stay & Experience</h1>
+      <p class="lead">Join thousands of travelers exploring the world comfortably.</p>
     </div>
 
-    <!-- Right: text content -->
-    <div class="hero-copy">
-      <h1>Make Your Stay <br><span class="strong">Truly Memorable</span></h1>
-      <p class="sub">Find places that match <span class="em">your lifestyle</span></p>
-      <p class="desc">
-        Discover hand-picked stays designed to inspire comfort, creativity, 
-        and connection. Every place is chosen with care to reflect unique experiences. 
-      </p>
+    <!-- Right Video -->
+    <div class="col-md-6">
+      <div class="ratio ratio-4x3 rounded overflow-hidden shadow-sm">
+        <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover rounded">
+          <source src="videos/house-nature.webm" type="video/webm">
+          <source src="images/7664029-hd_2048_1080_24fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
-
   </div>
 </section>
 
 
 
 
-<!-- Filter section -->
-<section class="filter-section">
-  <label for="price-filter">Filter by price:</label>
-  <select id="price-filter"></select> 
-</section>
+  <!-- Filter -->
+  <section class="container py-4 text-center my-4">
+    <label for="price-filter" class="form-label">Filter by price:</label>
+    <select id="price-filter" class="form-select d-inline-block w-auto"></select>
+  </section>
 
-  <!-- Places showcase -->
- 
-<section id="places-list" class="place-cards">
-  <!-- Place cards will be injected here dynamically -->
-</section>
-
-
-  <!-- Features / initiatives -->
-  <section class="features">
-    <h2>Our Features</h2>
-    <div class="feature-grid">
-      <div class="feature-item">
-        <h3>Verified Reviews</h3>
-        <p>All reviews are written by real users.</p>
-      </div>
-      <div class="feature-item">
-        <h3>Smart Filtering</h3>
-        <p>Find exactly what you want by price, type or location.</p>
-      </div>
-      <div class="feature-item">
-        <h3>24/7 Support</h3>
-        <p>Our team is here to help you anytime.</p>
-      </div>
-      <div class="feature-item">
-        <h3>Easy Booking</h3>
-        <p>Secure and fast reservation process.</p>
-      </div>
+  <!-- Places (Cards injected here) -->
+  <section class="container pb-5">
+    <div id="places-list" class="row g-4">
+      <!-- Cards from JS will be injected here -->
     </div>
   </section>
 
+  <!-- Features -->
+<section class="container py-5 text-center my-5 ">
+  <h2 class="mb-3 fw-bold">Our Features</h2>
+  <p class="text-muted mb-5">A few reasons travelers love HBnB</p>
 
-  <!-- Newsletter section -->
-  <section class="newsletter">
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="feature-box p-4">
+        <i class="bi bi-chat-square-text fs-1 mb-3 text-dark"></i>
+        <h5 class="fw-semibold mb-2">Verified Reviews</h5>
+        <p class="text-muted">Written by real users .</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="feature-box p-4">
+        <i class="bi bi-funnel fs-1 mb-3 text-dark"></i>
+        <h5 class="fw-semibold mb-2">Smart Filtering</h5>
+        <p class="text-muted">Filter by price, type, or location.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="feature-box p-4">
+        <i class="bi bi-headset fs-1 mb-3 text-dark"></i>
+        <h5 class="fw-semibold mb-2">24/7 Support</h5>
+        <p class="text-muted">Always available to help you.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="feature-box p-4">
+        <i class="bi bi-calendar-check fs-1 mb-3 text-dark"></i>
+        <h5 class="fw-semibold mb-2">Easy Booking</h5>
+        <p class="text-muted">Fast and secure reservation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Newsletter -->
+  <section class="bg-white text-center py-5">
     <h2>Subscribe for Updates</h2>
     <p>Get the latest news on new places and offers.</p>
-    <form class="subscribe-form">
-      <input type="email" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
+    <form class="d-flex justify-content-center gap-2 flex-wrap">
+      <input type="email" class="form-control w-auto" placeholder="Your email address" required>
+      <button type="submit" class="btn btn-dark">Subscribe</button>
     </form>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <p>&copy; 2025 HBnB. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="contact.html">Contact</a>
+  <footer class="bg-light py-4 text-center ">
+    <p class="mb-1">&copy; 2025 HBnB. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-muted me-3">Privacy</a>
+      <a href="#" class="text-muted me-3">Terms</a>
+      <a href="contact.html" class="text-muted">Contact</a>
     </div>
   </footer>
+
   <script src="scripts.js"></script>
 </body>
 </html>

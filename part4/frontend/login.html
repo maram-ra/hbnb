@@ -3,46 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>HBnB - Explore Unique Places</title>
+
+<!-- Montserrat Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  
-  <!-- Header with logo and nav -->
-   <header class="site-header">
-  <img src="images/logo.png" alt="HBnB Logo" class="logo">
 
-  <nav class="main-nav">
-    <a href="login.html" class="login-button" id="login-link">Login</a>
-  </nav>
-</header>
+  <!-- Header -->
+  <header class="site-header d-flex align-items-center justify-content-between px-4 py-3 border-bottom ">
+    <a href="index.html">
+      <img src="images/logo.png" alt="HBnB Logo" class="logo" style="height:40px">
+    </a>
+    <nav>
+      <a href="login.html" class="btn btn-outline-dark" id="login-link">Login</a>
+    </nav>
+  </header>
 
+  <!-- Login Form -->
+  <main class="container d-flex align-items-center justify-content-center py-5" style="min-height: 80vh;">
+    <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%;">
+      <h2 class="mb-3">Welcome Back</h2>
+      <p class="text-muted mb-4">Please log in to your account</p>
 
-  <main class="login-page">
-    <section class="login-form-section">
-      <h2>Welcome Back</h2>
-      <p>Please log in to your account</p>
+      <form id="login-form">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+        </div>
 
-      <form id="login-form" class="login-form">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+        </div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="••••••••" required>
-
-        <button type="submit">Login</button>
+        <button type="submit" class="btn btn-dark w-100">Login</button>
       </form>
-    </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 HBnB. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="contact.html">Contact</a>
+  <!-- Footer -->
+  <footer class="bg-white border-top text-center py-4">
+    <p class="mb-1">&copy; 2025 HBnB. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-muted me-3">Privacy</a>
+      <a href="#" class="text-muted me-3">Terms</a>
+      <a href="contact.html" class="text-muted">Contact</a>
     </div>
   </footer>
 

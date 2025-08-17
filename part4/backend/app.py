@@ -15,39 +15,81 @@ USERS = {
 }
 
 PLACES = [
-    {
-        "id": "a1",
-        "title": "Ocean View Cabin",
-        "price": 120,
-        "description": "Relaxing cabin with ocean view.",
-        "latitude": 24.7136,
-        "longitude": 46.6753,
-        "host": "John Doe",
+       {
+        "id": "c3",
+        "title": "Desert Eco ",
+        "price": 150,
+        "description": "Sustainable dome in the heart of the desert.",
+        "latitude": 24.7743,
+        "longitude": 46.7386,
+        "host": "Salma",
         "country": "SA",
-        "city": "Riyadh",
-        "amenities": ["Wifi", "Air conditioning", "Kitchen"],
-        "images": ["images/sample1.jpg"]
+        "city": "AlUla",
+        "amenities": ["Solar power", "AC", "Star view"],
+        "images": ["images/sample4.jpg"]
     },
     {
-        "id": "b2",
-        "title": "Mountain Retreat",
-        "price": 98,
-        "description": "Cozy escape in the mountains",
-        "latitude": 36.7783,
-        "longitude": -119.4179,
-        "host": "Jane Smith",
+        "id": "d4",
+        "title": "Lakeside A-Frame",
+        "price": 180,
+        "description": "A modern cabin on the lake edge.",
+        "latitude": 44.3148,
+        "longitude": -85.6024,
+        "host": "Khaled",
         "country": "US",
-        "city": "Fresno",
-        "amenities": ["Heating", "Parking"],
+        "city": "Michigan",
+        "amenities": ["Fireplace", "WiFi", "Canoe"],
+        "images": ["images/sample3.jpg"]
+    },
+    {
+        "id": "e5",
+        "title": "Tropical Treehouse",
+        "price": 210,
+        "description": "Live among the trees in this tropical escape.",
+        "latitude": 8.7832,
+        "longitude": -55.4915,
+        "host": "Fatima",
+        "country": "BR",
+        "city": "Manaus",
+        "amenities": ["Outdoor shower", "Breakfast included"],
         "images": ["images/sample2.jpg"]
+    },
+    {
+        "id": "f6",
+        "title": "Scandinavian Loft",
+        "price": 130,
+        "description": "Minimalist loft in a Nordic city.",
+        "latitude": 59.3293,
+        "longitude": 18.0686,
+        "host": "Sven",
+        "country": "SE",
+        "city": "Stockholm",
+        "amenities": ["Sauna", "Fast WiFi", "City view"],
+        "images": ["images/sample1.jpg"]
     }
     
 ]
 
 REVIEWS = [
-    {"id": "r1", "place_id": "a1", "user": "reemah", "rating": 5, "comment": "Amazing view!"},
-    {"id": "r2", "place_id": "a1", "user": "osama", "rating": 4, "comment": "Very cozy."},
+    {"id": "r3", "place_id": "c3", "user": "salem", "rating": 5, "comment": "Magical dome in the desert!"},
+    {"id": "r4", "place_id": "d4", "user": "lena", "rating": 4, "comment": "Very peaceful by the lake."},
+    {"id": "r5", "place_id": "e5", "user": "ahmad", "rating": 5, "comment": "The treehouse was dreamy!"},
+    {"id": "r6", "place_id": "f6", "user": "sara", "rating": 3, "comment": "Loved the Scandinavian design."},
+
+    {"id": "r7", "place_id": "c3", "user": "noura", "rating": 4, "comment": "A quiet and eco-friendly escape."},
+    {"id": "r8", "place_id": "c3", "user": "jake", "rating": 5, "comment": "Stargazing at night was unforgettable."},
+
+    {"id": "r9", "place_id": "d4", "user": "reem", "rating": 5, "comment": "Woke up to birds and lake mist — perfect!"},
+    {"id": "r10", "place_id": "d4", "user": "mohammed", "rating": 4, "comment": "Comfortable and very scenic."},
+
+    {"id": "r11", "place_id": "e5", "user": "laura", "rating": 5, "comment": "Nature all around — felt alive!"},
+    {"id": "r12", "place_id": "e5", "user": "ali", "rating": 4, "comment": "Clean, cozy, and surrounded by trees."},
+
+    {"id": "r13", "place_id": "f6", "user": "emily", "rating": 4, "comment": "Minimalist but super functional."},
+    {"id": "r14", "place_id": "f6", "user": "abdullah", "rating": 5, "comment": "A hidden gem in Stockholm!"}
 ]
+
+
 
 # ===== Helpers =====
 DEMO_TOKEN = "demo-token"

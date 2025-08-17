@@ -1,74 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HBnB – Add Review</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HBnB - Explore Unique Places</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+  <!-- Montserrat Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" href="images/icon.png"/>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/icon.png">
 </head>
+
 <body>
   <!-- Header -->
-  <header class="site-header">
+  <header class="site-header d-flex align-items-center justify-content-between px-4 py-3 border-bottom ">
     <a href="index.html">
-  <img src="images/logo.png" alt="HBnB Logo" class="logo">
-</a>
-
-    <nav class="main-nav">
-      <a href="login.html" class="login-button" id="login-link">Login</a>
+      <img src="images/logo.png" alt="HBnB Logo" class="logo" style="height:40px">
+    </a>
+    <nav>
+      <a href="login.html" class="btn btn-outline-dark" id="login-link">Login</a>
     </nav>
   </header>
 
   <!-- Page content -->
-  <main class="place-details-page">
-    <section class="add-review-section">
-      <h2>Add a Review</h2>
-      <p id="place-hint" class="pd-muted" style="margin-bottom: 1rem;"></p>
+<main class="container py-5">
+  <div class="mx-auto bg-white p-5 rounded shadow-sm" style="max-width: 600px;">
+    <h2 class="mb-4 text-center">Add a Review</h2>
+    <p id="place-hint" class="text-muted text-center"></p>
 
-      <!-- Review form -->
-      <form id="review-form" class="add-review form" autocomplete="off">
-        <label for="review-text">Your review</label>
-        <textarea id="review-text" name="review" rows="5" placeholder="Write your experience..." required></textarea>
+    <!-- Review form -->
+    <form id="review-form" autocomplete="off" class="needs-validation" novalidate>
+      <div class="mb-4">
+        <label for="review-text" class="form-label">Your review</label>
+        <textarea id="review-text" name="review" rows="5" class="form-control" placeholder="Write your experience..." required></textarea>
+      </div>
 
-        <label for="rating">Rating</label>
-        <select id="rating" name="rating" required>
+      <div class="mb-4">
+        <label for="rating" class="form-label">Rating</label>
+        <select id="rating" name="rating" class="form-select" required>
           <option value="5" selected>5 – Excellent</option>
           <option value="4">4 – Very good</option>
           <option value="3">3 – Good</option>
           <option value="2">2 – Fair</option>
           <option value="1">1 – Poor</option>
         </select>
-
-        <button type="submit">Submit Review</button>
-      </form>
-
-      <!-- Back link (filled by JS with current place id) -->
-      <div style="margin-top:1rem;">
-        <a id="back-to-place" class="details-button" href="#">Back to place</a>
       </div>
-    </section>
-  </main>
+
+      <button type="submit" class="btn btn-dark w-100 rounded-pill fw-bold">Submit Review</button>
+
+      <div class="mt-3">
+        <a id="back-to-place" class="btn btn-outline-secondary w-100 rounded-pill" href="#">Back to place</a>
+      </div>
+    </form>
+  </div>
+</main>
+
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <p>&copy; 2025 HBnB. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="contact.html">Contact</a>
+  <footer class="bg-white border-top text-center py-4 mt-5">
+    <p class="mb-1">&copy; 2025 HBnB. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-muted me-3">Privacy</a>
+      <a href="#" class="text-muted me-3">Terms</a>
+      <a href="contact.html" class="text-muted">Contact</a>
     </div>
   </footer>
 
   <!-- Script -->
   <script src="scripts.js"></script>
   <script>
-    // Small helper to show place id hint and wire the back link
     document.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);
       const pid = params.get('id');
