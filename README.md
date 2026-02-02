@@ -12,10 +12,10 @@ reviews.
 
 This project focuses on:
 
--   Building a REST API using Flask\
--   Connecting a frontend to backend endpoints\
--   Handling authentication with tokens\
--   Rendering dynamic content on the client side\
+-   Building a REST API using Flask
+-   Connecting a frontend to backend endpoints
+-   Handling authentication with tokens
+-   Rendering dynamic content on the client side
 -   Managing CORS for local development
 
 The backend uses mock in-memory data to simulate users, places, and
@@ -25,12 +25,12 @@ reviews.
 
 ## Features
 
--   Browse a list of places\
--   View detailed information about a specific place\
--   Display amenities and reviews per place\
--   Filter places by price (client-side)\
--   Login with a demo user\
--   Add a review to a place (authenticated users only)\
+-   Browse a list of places
+-   View detailed information about a specific place
+-   Display amenities and reviews per place
+-   Filter places by price (client-side)
+-   Login with a demo user
+-   Add a review to a place (authenticated users only)
 -   Health check endpoint for the API
 
 ------------------------------------------------------------------------
@@ -39,33 +39,18 @@ reviews.
 
 ### Backend
 
--   Python\
--   Flask 3.0.3\
+-   Python
+-   Flask 3.0.3
 -   Flask-CORS 4.0.1
 
 ### Frontend
 
--   HTML5\
--   CSS3\
--   JavaScript (Vanilla)\
--   Bootstrap 5 (CDN)\
--   Bootstrap Icons\
--   Google Fonts (Montserrat)
+-   HTML5
+-   CSS3
+-   JavaScript 
+-   Bootstrap 5 
 
-------------------------------------------------------------------------
 
-## Project Structure
-
-part4/ ├── backend/ │ ├── app.py │ └── requirements.txt │ ├── frontend/
-│ ├── index.html │ ├── login.html │ ├── place.html │ ├── add_review.html
-│ ├── scripts.js │ ├── styles.css │ ├── images/ │ └── videos/ └──
-README.md
-
-------------------------------------------------------------------------
-
-## API Base URL
-
-http://127.0.0.1:5000/api/v1
 
 ------------------------------------------------------------------------
 
