@@ -64,63 +64,8 @@ reviews.
   POST     /reviews                Add a review                    Yes (Bearer)
   GET      /health                 Health check                    No
 
-------------------------------------------------------------------------
 
-## Authentication
 
-The login endpoint returns a demo access token:
-
-access_token: demo-token
-
-The frontend stores the token in a cookie named `token`.\
-Authenticated requests include the header:
-
-Authorization: Bearer demo-token
-
-### Demo User
-
-Email: demo@hbnb.io\
-Password: secret
-
-------------------------------------------------------------------------
-
-## Running the Project Locally
-
-### 1. Start the Backend
-
-cd backend\
-python -m venv venv\
-venv`\Scripts`{=tex}`\activate `{=tex}(Windows)\
-source venv/bin/activate (Mac/Linux)
-
-pip install -r requirements.txt\
-python app.py
-
-API runs at: http://127.0.0.1:5000
-
-------------------------------------------------------------------------
-
-### 2. Start the Frontend
-
-Option A -- VS Code Live Server\
-Open the frontend folder and run index.html with Live Server
-
-Option B -- Python HTTP Server\
-cd frontend\
-python -m http.server 5500
-
-Open: http://127.0.0.1:5500/index.html
-
-------------------------------------------------------------------------
-
-## Testing
-
-1.  Start backend\
-2.  Start frontend\
-3.  Login with demo user\
-4.  Browse places\
-5.  View place details\
-6.  Add review
 
 ------------------------------------------------------------------------
 
